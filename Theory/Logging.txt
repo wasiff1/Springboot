@@ -57,7 +57,7 @@ A logging framework is the **actual implementation** that:
 * Used by Spring, Hibernate, Kafka
 ### 6️⃣ Log Levels
 ```
-TRACE < DEBUG < INFO < WARN < ERROR
+TRACE < DEBUG < INFO < WARN < ERROR <FATAL
 If level = INFO → INFO, WARN, ERROR printed
 ---
 ### 7️⃣ Logger
@@ -87,3 +87,7 @@ Service → File / STDOUT → Logstash → Elasticsearch → Kibana
 ### 1️⃣2️⃣ Interview One-Liner
 
 > **Spring Boot logging uses SLF4J as a facade and Logback as the default logging framework, where logs flow through logger, appender, and encoder before reaching the destination.
+Log monitoring tool
+putty 
+ELK
+Splunk paid commercial
