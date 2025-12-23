@@ -1,6 +1,16 @@
 
 ## 📝 Logging in Spring Boot 
-
+In Real time we use log level either info or error level 
+=> for exeption we use error level 
+=> for higher level we use info.
+=> In springboot by default it will use log level as info i.e log.info() 
+=> In springboot by default it will use as appender as console appender
+=> To generate log messages in log files we need to set below property
+ logging.file.name=file.name
+ => to change log level we need to set below property  in application.property file
+ logging.level.root=debug/info whatever
+To enable logging in appliaction  we need to create object of logger by LogFactory.getLogger
+private Logger logger = LoggerFactory.getLogger(ProductController.class);
 ### 1️⃣ What is Logging?
 
 Logging is the process of **recording application events** for:
@@ -58,6 +68,7 @@ A logging framework is the **actual implementation** that:
 ### 6️⃣ Log Levels
 ```
 TRACE < DEBUG < INFO < WARN < ERROR <FATAL
+fatal in logback does not exist
 If level = INFO → INFO, WARN, ERROR printed
 ---
 ### 7️⃣ Logger
